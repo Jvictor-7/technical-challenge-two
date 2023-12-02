@@ -1,16 +1,31 @@
-# desafio2
+# Technical Challenge Two
 
-A new Flutter project.
+> In this project I tried to develop an application for reading eBooks that offers an interactive and easy-to-use experience for users.
 
-## Getting Started
+## 💻 Prerequisites
 
-This project is a starting point for a Flutter application.
+Before you begin, ensure you have met the following requirements:
 
-A few resources to get you started if this is your first Flutter project:
+* You have installed [Flutter](https://flutter.dev/docs/get-started/install)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 How to run the project
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+To run the project successfully, follow these steps:
+
+- Install Flutter
+- Clone the repository or download
+- Access the directory of project "cd technical-challenge-two-escribo"
+- Run the command 'flutter pub get' to install the dependencies
+- Connect a device or launch an emulator
+- Run the command 'flutter run' to start the app
+
+## Project Structure
+- lib/: Contains the project source files.
+- assets/: Folder to store resources such as images, fonts, etc.
+
+## Apk
+- The link to download [.apk](https://drive.google.com/drive/folders/1P4HDICoro-7H_3JLa_UkxCwxZRC9Q9Fa?usp=sharing) of project 
+
+## 🤝 Contact
+- [Gmail](jvcl@ic.ufal.br)
+- [Linkedin](https://www.linkedin.com/in/jo%C3%A3o-victor-cavalcante-lima-574a60227/)
