@@ -42,7 +42,8 @@ To run the project successfully, follow these steps:
 - assets/: Folder to store resources such as images, fonts, etc.
 
 ## Apk
-- The link to download [.apk](https://drive.google.com/drive/folders/1P4HDICoro-7H_3JLa_UkxCwxZRC9Q9Fa?usp=sharing) of project 
+- The link to download [.apk](https://drive.google.com/drive/folders/1P4HDICoro-7H_3JLa_UkxCwxZRC9Q9Fa?usp=sharing) of project
+- The apk can also be found in the directory: build/app/outputs/flutter-apk/app-release.apk
 
 ## 🤝 Contact
 - [Gmail](jvcl@ic.ufal.br)
