@@ -5,9 +5,9 @@ import '../models/book.dart';
 import 'package:http/http.dart' as http;
 
 class HomeController {
-  List<Book> tabela = [];
+  List<Book> table = [];
 
-  Future<void> updateTabela() async {
+  Future<void> updateTable() async {
     var response = await http.get(
       Uri.parse('https://escribo.com/books.json'),
     );
@@ -27,13 +27,13 @@ class HomeController {
         );
       }).toList();
 
-      tabela = books;
+      table = books;
     } else {
       throw Exception('Falha de Comunicação com a API');
     }
   }
 
-  List<Book> getFavoritos() {
-    return tabela.where((book) => book.is_starred).toList();
+  List<Book> getFavorites() {
+    return table.where((book) => book.is_starred).toList();
   }
 }

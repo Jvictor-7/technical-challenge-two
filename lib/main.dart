@@ -7,7 +7,7 @@ void main() async {
 }
 
 class MeuAplicativo extends StatelessWidget {
-  const MeuAplicativo({Key? key}) : super(key: key);
+  const MeuAplicativo({super.key});
 
   @override
   Widget build(BuildContext context) {

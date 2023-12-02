@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print, unused_field, prefer_typing_uninitialized_variables, deprecated_member_use
 
 import 'dart:async';
+import 'dart:convert';
 import 'package:desafio2/models/book.dart';
 import 'package:desafio2/pages/home_controller.dart';
 import 'package:flutter/material.dart';
@@ -35,16 +36,16 @@ class _HomePageState extends State<HomePage>
     if (!_tabController.indexIsChanging) {
       if (_tabController.index == 1) {
         setState(() {
-          favoritesList = controller.getFavoritos();
+          favoritesList = controller.getFavorites();
         });
       }
     }
   }
 
   Future<void> updateBooks() async {
-    await controller.updateTabela();
+    await controller.updateTable();
     setState(() {
-      booksList = controller.tabela;
+      booksList = controller.table;
     });
   }
 
@@ -96,7 +97,10 @@ class _HomePageState extends State<HomePage>
     return ListView.builder(
       itemCount: books.length,
       itemBuilder: (BuildContext context, int i) {
-        final tabela = books;
+        final table = books;
+
+        String decodedTitle = utf8.decode(table[i].title.runes.toList());
+        String decodedAuthor = utf8.decode(table[i].author.runes.toList());
 
         return Card(
           elevation: 4.0,
@@ -104,24 +108,24 @@ class _HomePageState extends State<HomePage>
           child: InkWell(
             onTap: () async {},
             child: ListTile(
-              title: Text(tabela[i].title),
-              subtitle: Text(tabela[i].author),
-              leading: Image.network(tabela[i].cover_url),
+              title: Text(decodedTitle),
+              subtitle: Text(decodedAuthor),
+              leading: Image.network(table[i].cover_url),
               trailing: IconButton(
                 onPressed: () {
                   setState(() {
-                    tabela[i].is_starred = !tabela[i].is_starred;
+                    table[i].is_starred = !table[i].is_starred;
                   });
                 },
-                icon: tabela[i].is_starred
+                icon: table[i].is_starred
                     ? const Icon(Icons.star, color: Colors.red)
                     : const Icon(Icons.star_border_outlined),
               ),
               onTap: () async {
                 try {
-                  String downloadUrl = tabela[i].download_url;
+                  String downloadUrl = table[i].download_url;
                   String fileName =
-                      '${tabela[i].title}.epub'; // Nome do arquivo a ser salvo
+                      '${table[i].title}.epub'; // Nome do arquivo a ser salvo
 
                   await downloadFile(downloadUrl, fileName);
                   // Aqui você pode exibir uma mensagem de sucesso ou realizar outra ação após o download
