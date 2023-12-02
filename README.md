@@ -8,7 +8,7 @@
    - The application must access an API to download an updated list of books and their respective covers
 - [x] 2. Bookshelf
    - Display the covers of downloaded books in an organized way on a virtual shelf
-- [ ] 3. Downloading and Storing Books:
+- [x] 3. Downloading and Storing Books:
    - Allow the user to download a book by tapping its cover and saving the file to the device
 - [ ] 4. Book Exhibition:
    - Use the plugin [Vocsy Epub Viewer](https://pub.dev/packages/vocsy_epub_viewer) to display the content of the book.
