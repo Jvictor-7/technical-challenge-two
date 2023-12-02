@@ -3,11 +3,11 @@ import 'package:desafio2/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
-  runApp(const MeuAplicativo());
+  runApp(const MyApp());
 }
 
-class MeuAplicativo extends StatelessWidget {
-  const MeuAplicativo({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
